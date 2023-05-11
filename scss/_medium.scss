@@ -1,0 +1,80 @@
+nav{
+  position:relative;
+	button{
+		display: none;
+	}
+    
+	ul{
+		margin-left: 2%;
+	}
+
+	ul li{float: left;}
+
+	ul li a{
+		border: none;
+		border-right: 1px solid rgba(0,0,0,0.2);
+		padding: .7rem .9rem;
+		
+		
+		span{display: none;}
+	}
+
+	
+
+	ul li ul{
+		left: -999em; //saca la lista fuera del plano
+		z-index: 99;
+		background-color: $primaryColor;
+		position: absolute;
+		width: 10rem;
+	}
+
+	ul li:hover ul{left: auto}
+	
+	ul li ul li{ float: none;
+	             border-bottom: 1px solid rgba(0,0,0,0.2);} //previene que lo elementos floten a la izquierda, esto permite que se muestren en forma de listado 
+  ul.closed{display: block;}
+}
+  
+header{
+        height:540px;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../images/hero1080.jpg);
+} 
+
+/*-------------------MAIN-----------------*/
+
+main {
+    
+    section.business_description{
+		div{
+		float: left;
+		width: 50%; 
+		}
+	  
+	  }//end busines desciption
+
+    section.gallery{
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 2%;}
+
+}
+  
+
+/*-----------------FOOTER-------------*/
+  footer{
+    
+    grid-template-columns:repeat(2, 1fr);
+    
+    
+    div:first-child{  
+      
+      ul li{
+          display: inline-block;
+          width: auto;
+        }
+    }
+    
+    div:nth-child(4), div:nth-child(5){
+        grid-column-start: span 2;
+    }
+}

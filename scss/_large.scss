@@ -1,0 +1,60 @@
+
+body{
+  div.bg_large{
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 1em;
+  }
+  background-color: rgb(224, 224, 224);
+  
+}
+
+
+/*----------------------HEADER------------------------------*/
+header{
+  nav ul li{width: auto;}
+  
+} 
+    
+
+
+/*-------------------------MAIN-------------------------------*/
+main {
+  section.business_description{
+        div{
+        float: left;
+        width: 50%; 
+        }
+    }//end busines desciption
+
+  section.gallery{
+  
+    grid-template-columns: repeat(4, 1fr);
+    .box_img:nth-child(5){
+     grid-row-start: span 2;
+    }
+  }
+}//end main
+
+/*-------------------------FOOTER------------------------------*/
+footer{
+    
+    grid-template-columns:repeat(3, 1fr);
+    
+    
+    div:first-child{  
+      ul li{
+          display: inline-block;
+          width: auto;
+        }
+    }
+
+    
+
+    div:nth-child(4), div:nth-child(5){
+        grid-column-start: span 3;
+    }
+
+
+}
